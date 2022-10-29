@@ -14,8 +14,7 @@
         <maven.compiler.target>11</maven.compiler.target>
  
     </properties>
-
-
+    
 <distributionManagement>
   <repository>
     <id>cloudbinary-cloudbinary</id>
@@ -23,7 +22,6 @@
     <url>https://cloudbinary-586005310737.d.codeartifact.us-east-1.amazonaws.com/maven/cloudbinary/</url>
   </repository>
 </distributionManagement>t>
-    
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
