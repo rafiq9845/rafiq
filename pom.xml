@@ -12,16 +12,17 @@
         <junit.jupiter.version>5.2.0</junit.jupiter.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        
+ 
     </properties>
+
 
 <distributionManagement>
   <repository>
     <id>cloudbinary-cloudbinary</id>
     <name>cloudbinary-cloudbinary</name>
-    <url>https://cloudbinary-266934144328.d.codeartifact.us-east-1.amazonaws.com/maven/cloudbinary/</url>
+    <url>https://cloudbinary-586005310737.d.codeartifact.us-east-1.amazonaws.com/maven/cloudbinary/</url>
   </repository>
-</distributionManagement>
+</distributionManagement>t>
     
     <dependencies>
         <dependency>
