@@ -1,9 +1,6 @@
 pipeline {
     agent any 
-    tools {
-         maven 'maven'
-         jdk 'java'
-    }
+    
     stages {
          stage('Stage-0 : Static Code Quality Using SonarQube') { 
              steps {
