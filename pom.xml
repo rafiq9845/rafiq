@@ -16,11 +16,7 @@
     </properties>
     
 <distributionManagement>
-  <repository>
-    <id>cloudbinary-cloudbinary</id>
-    <name>cloudbinary-cloudbinary</name>
-    <url>https://cloudbinary-586005310737.d.codeartifact.us-east-1.amazonaws.com/maven/cloudbinary/</url>
-  </repository>
+ 
 </distributionManagement>t>
     <dependencies>
         <dependency>
