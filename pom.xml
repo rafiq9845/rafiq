@@ -14,9 +14,9 @@
         <maven.compiler.target>11</maven.compiler.target>
 
         <sonar.organization>opswork</sonar.organization>
-        <sonar.projectKey>cloudbinary</sonar.projectKey>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.login>9c680884ea5a60342e545169f0bb8350dcb837c5</sonar.login>
+       <sonar.organization>opswork</sonar.organization>
+       <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+       <sonar.login>3f0c051d9dc882810256b3406101c006d8d57f92</sonar.login>
         
     </properties>
 
