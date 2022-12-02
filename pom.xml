@@ -24,7 +24,7 @@
   <repository>
     <id>cloudbinary-cloudbinary</id>
     <name>cloudbinary-cloudbinary</name>
-    <url>https://cloudbinary-266934144328.d.codeartifact.us-east-1.amazonaws.com/maven/cloudbinary/</url>
+    <url>https://cloudbinary-586005310737.d.codeartifact.us-east-1.amazonaws.com/maven/cloudbinary/</url>
   </repository>
 </distributionManagement>
     
