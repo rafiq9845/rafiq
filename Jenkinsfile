@@ -4,7 +4,7 @@ pipeline {
         stage('SCM') {
             steps {
                 echo 'Code Quality..'
-                sh 'mvn sonar:sonar'
+                sh 'mvn verify sonar:sonar'
             }
         }
         stage('Clean') {
