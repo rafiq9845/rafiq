@@ -1,8 +1,7 @@
 pipeline {
     agent any
-
     stages {
-        stage('SCA') {
+        stage('SCM') {
             steps {
                 echo 'Code Quality..'
                 sh 'mvn sonar:sonar'
