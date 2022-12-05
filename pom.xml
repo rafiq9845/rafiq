@@ -16,7 +16,7 @@
         <sonar.organization>opswork</sonar.organization>
        <sonar.projectKey>cloudbinary</sonar.projectKey>
        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-       <sonar.login>c4c3cc46f42cef4a39e3d843ae889397d4fbf265</sonar.login>
+       <sonar.login>8ff86e065c92219cf3e8551afb69a117afcaff97</sonar.login>
         
     </properties>
 
