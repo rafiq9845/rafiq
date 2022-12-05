@@ -1,65 +1,64 @@
 pipeline {
-    agent any
+    agent any 
+    tools {
+         maven 'maven'
+         jdk 'java'
+    }
     stages {
-        stage('SCM') {
+         stage('Stage-0 : Static Code Quality Using SonarQube') { 
+             steps {
+                 sh 'mvn sonar:sonar' 
+             }
+         }
+        stage('Stage-1 : Clean') { 
             steps {
-                echo 'Code Quality..'
-                sh 'mvn sonar:sonar'
-            }
-        }
-        stage('Clean') {
-            steps {
-                echo 'Clean..'
                 sh 'mvn clean'
             }
         }
-        stage('Validate') {
+        stage('Stage-2 : Validate') { 
             steps {
-                echo 'Validate..'
                 sh 'mvn validate'
             }
         }
-        stage('Compile') {
+        stage('Stage-3 : Compile') { 
             steps {
-                echo 'Compile....'
                 sh 'mvn compile'
             }
         }
-        stage('Test') {
+        stage('Stage-4 : Test') { 
             steps {
-                echo 'Test....'
-                sh 'mvn test'
+                sh 'mvn test -DskipTests'
             }
         }
-        stage('Package') {
+        stage('Stage-5 : Install') { 
             steps {
-                echo 'Package....'
-                sh 'mvn package'
+                sh 'mvn install -DskipTests'
             }
         }
-         stage('Verify') {
+        stage('Stage-6 : Verify') { 
             steps {
-                echo 'Verify....'
-                sh 'mvn verify'
+                sh 'mvn verify -DskipTests'
             }
         }
-         stage('Install') {
+        stage('Stage-7 : Package') { 
             steps {
-                echo 'Install....'
-                sh 'mvn install'
+                sh 'mvn package -DskipTests'
             }
         }
-        //  stage('Deploy') {
-        //     steps {
-        //         echo 'Deploy....'
-        //         sh 'mvn deploy'
-        //     }
-        // }
-        //  stage('Deliver and Deployment') {
-        //     steps {
-        //         echo 'Deliver and Deployment....'
-        //         sh ''
-        //     }
-        // }
+    //    stage('Stage-8 : Deploy an Artifact to Artifactory Manager i.e. Nexus/Jfrog') { 
+    //       steps {
+    //            sh 'mvn deploy -DskipTests'
+    //        }
+    //    }
+    //    stage('Stage-9 : Deployment - Deploy a Artifact devops-2.0.0-SNAPSHOT.war file to Tomcat Server') { 
+    //        steps {
+    //            sh 'curl -u admin:redhat@123 -T target/**.war "http://54.144.11.145:8080/manager/text/deploy?path=/stardevops&update=true"'
+    //        }
+    //    } 
+    //    stage('Stage-10 : SmokeTest') { 
+    //        steps {
+    //           sh 'curl --retry-delay 10 --retry 5 "http://54.144.11.145:8080/stardevops"'
+    //        }
+    //    }
     }
 }
