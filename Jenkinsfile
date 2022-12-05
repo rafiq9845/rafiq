@@ -59,6 +59,6 @@ pipeline {
     //        steps {
     //           sh 'curl --retry-delay 10 --retry 5 "http://54.144.11.145:8080/stardevops"'
     //        }
-    //    }
+    //   }
     }
 }
